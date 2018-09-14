@@ -1,0 +1,13 @@
+{
+  "name": "ndc-talk-20180920",
+  "alias": "bet-on-react-ndc",
+  "files": [
+    "index.html",
+    "main.js",
+    "images"
+  ],
+  "type": "static",
+  "static": {
+    "cleanUrls": true
+  }
+}

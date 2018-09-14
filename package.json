@@ -1,0 +1,14 @@
+{
+  "name": "ndc-talk-20180920",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "mdx-deck index.mdx",
+    "build": "mdx-deck build index.mdx && cp -r images dist/images && cp now.json dist/",
+    "deploy": "yarn build && cd dist && now && now alias"
+  },
+  "dependencies": {
+    "mdx-deck": "^1.7.3"
+  }
+}
