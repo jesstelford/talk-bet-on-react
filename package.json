@@ -5,10 +5,15 @@
   "license": "MIT",
   "scripts": {
     "start": "mdx-deck index.mdx",
-    "build": "mdx-deck build index.mdx && cp -r images dist/images && cp now.json dist/",
-    "deploy": "yarn build && cd dist && now && now alias"
+    "build": "mdx-deck build index.mdx",
+    "screenshot": "mdx-deck screenshot index.mdx",
+    "deploy": "rm -rf dist/ && yarn build && yarn screenshot && cp -r images dist/ && cp now.json dist/ && cp favicon* dist/ && cd dist && now && now alias"
   },
   "dependencies": {
-    "mdx-deck": "^1.7.3"
+    "mdx-deck": "^1.7.3",
+    "mdx-deck-code-surfer": "^0.4.1",
+    "raw-loader": "^0.5.1",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
   }
 }
